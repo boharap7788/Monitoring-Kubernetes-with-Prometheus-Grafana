@@ -1,5 +1,5 @@
 # Monitoring-Kubernetes-with-Prometheus-Grafana
-  Setup Prometheus &amp; Grafana Monitoring on Kubernetes using Helm
+   Prometheus Grafana Monitoring on Kubernetes using Helm
 
 # To install Helm using Snap, run the following command:
   sudo snap install helm --classic
@@ -46,12 +46,15 @@ data:
 # Command to decrypt it 
   echo "put(admin-password/admin-user)" | openssl base64 -d ; echo
   
+  
 # Login to grafana the create dashboard by importing id 6417 ,3662 , you will get dashboard from grafana Labs 
 https://grafana.com/grafana/dashboards/6417-kubernetes-cluster-prometheus/
 
 https://grafana.com/grafana/dashboards/3662-prometheus-2-0-overview/
 
+# To stop or uninstall all running resources deployed through Helm, you can use the following command:
 
+helm ls --all --short | xargs -L1 helm uninstall
 
 
 
